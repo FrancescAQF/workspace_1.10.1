@@ -1,0 +1,30 @@
+09:32:15 **** Incremental Build of configuration Debug for project labo_10 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L432xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:30:10: warning: unused variable 'i' [-Wunused-variable]
+   30 |  uint8_t i = 0;
+      |          ^
+../Core/Src/main.c:29:11: warning: unused variable 'DAC_OUT' [-Wunused-variable]
+   29 |  uint32_t DAC_OUT[4] ={0,1241,2482,3723};
+      |           ^~~~~~~
+../Core/Src/main.c: At top level:
+../Core/Src/main.c:84:5: error: redefinition of 'main'
+   84 | int main(void)
+      |     ^~~~
+../Core/Src/main.c:27:5: note: previous definition of 'main' was here
+   27 | int main(void)
+      |     ^~~~
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:119:20: error: 'DAC_OUT' undeclared (first use in this function)
+  119 |    DAC1->DHR12R1 = DAC_OUT[i++];
+      |                    ^~~~~~~
+../Core/Src/main.c:119:20: note: each undeclared identifier is reported only once for each function it appears in
+../Core/Src/main.c:119:28: error: 'i' undeclared (first use in this function)
+  119 |    DAC1->DHR12R1 = DAC_OUT[i++];
+      |                            ^
+make: *** [Core/Src/subdir.mk:34: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+
+09:32:15 Build Failed. 4 errors, 2 warnings. (took 299ms)
+

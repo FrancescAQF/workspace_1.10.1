@@ -1,0 +1,10 @@
+20:38:16 **** Incremental Build of configuration Debug for project proyecto ****
+make -j8 all 
+arm-none-eabi-size   proyecto.elf 
+   text	   data	    bss	    dec	    hex	filename
+  22920	    128	   2832	  25880	   6518	proyecto.elf
+Finished building: default.size.stdout
+ 
+
+20:38:17 Build Finished. 0 errors, 0 warnings. (took 234ms)
+

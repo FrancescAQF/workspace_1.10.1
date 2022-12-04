@@ -1,0 +1,10 @@
+12:11:03 **** Incremental Build of configuration Debug for project Laboratorio_2 ****
+make -j8 all 
+arm-none-eabi-size   Laboratorio_2.elf 
+   text	   data	    bss	    dec	    hex	filename
+   6176	     20	   1572	   7768	   1e58	Laboratorio_2.elf
+Finished building: default.size.stdout
+ 
+
+12:11:03 Build Finished. 0 errors, 0 warnings. (took 296ms)
+
